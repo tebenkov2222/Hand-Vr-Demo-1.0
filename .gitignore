@@ -1,0 +1,69 @@
+
+# Создано https://www.gitignore.io/api/unity
+# Edit at https://www.gitignore.io/?templates=unity
+
+### Единство ###
+# Этот. файл gitignore должен быть помещен в корень каталога проекта Unity
+#
+# Получить последние из https://github.com/github/gitignore/blob/master/Unity.gitignore
+/ [Ll]ibrary/
+/ [Tt]emp/
+/ [Oo]bj/
+/[Bb]uild/
+/ [Bb]uilds/
+/ [Ll]ogs/
+/ [Мм]emoryCaptures/
+
+# Никогда не игнорировать метаданные активов
+!/[Aa]ssets/**/*.мета
+
+# Раскомментируйте эту строку, если хотите игнорировать плагин asset store tools
+# /[Aa]ssets/AssetStoreTools*
+
+# TextMesh Pro файлы
+[Aa]ssets / TextMesh*Pro/
+
+# Автогенерированный плагин JetBrains Rider
+[Aa]ssets / Плагины / редактор / JetBrains*
+
+# Каталог кэша Visual Studio
+.против/
+
+# Каталог кэша градиента
+.грейфер/
+
+# Автогенерированное решение VS / MD / Consulo и файлы проекта
+ExportedObj/
+.consulo/
+*.csproj
+*.unityproj
+*.ФСЛ
+*.suo
+*.ПТМ
+*.пользователь
+*.userprefs
+*.pidb
+*.booproj
+*.ДГВ
+*.распределительная плата
+*.MDB-компонента
+*.opendb
+*.VC.db
+
+# Сгенерированные метафайлы Unity3D
+*.пидб.мета
+*.распределительная плата.мета
+*.MDB-компонента.мета
+
+# Unity3D сгенерированный файл в отчетах о сбоях
+sysinfo.формат txt
+
+# Опирающийся
+*.apk
+*.unitypackage
+
+# Crashlytics сгенерированный файл
+crashlytics-сборка.свойства
+
+
+# Конец https://www.gitignore.io/api/unity
