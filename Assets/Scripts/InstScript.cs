@@ -33,19 +33,18 @@ public class InstScript : MonoBehaviour {
         if (Rotx != RotxP)
         {
             inst.transform.Rotate(Rotx-RotxP, 0, 0);
-            Rotx = RotxP;
+            RotxP = Rotx;
         }
         if (Roty != RotyP)
         {
             inst.transform.Rotate(0, Roty - RotyP, 0);
-            Roty = RotyP;
+            RotyP = Roty;
         }
         if (Rotz != RotzP)
         {
             inst.transform.Rotate(0, 0, Rotz - RotzP);
-            Rotz = RotzP;
+            RotzP = Rotz;
         }
-        //else arctg = 0;
 
         inst.transform.position = InstObjectPosition;
         inst.transform.localScale = new Vector3(InstObjectScale, InstObjectScale, InstObjectScale);
