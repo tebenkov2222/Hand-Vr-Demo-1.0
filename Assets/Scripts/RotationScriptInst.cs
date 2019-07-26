@@ -9,14 +9,8 @@ public class RotationScriptInst : MonoBehaviour {
         originQuternion = transform.rotation;
 
     }
-    public void RotationInst(float RotX,float RotY,float RotZ)
+    public void RotationInst(Vector3 point1, Vector3 point2)
     {
-        // преобразоывание градусов в эйлеры
-        Quaternion RotYQuat = Quaternion.AngleAxis(RotY, Vector3.up);
-        Quaternion RotXQuat = Quaternion.AngleAxis(RotX, Vector3.right);
-        Quaternion RotZQuat = Quaternion.AngleAxis(RotZ, Vector3.forward);
-        // преобразоывание градусов в эйлеры \\
-        //this.transform.rotation = originQuternion * RotXQuat * RotYQuat * RotZQuat; // использую эйлеры
-        this.transform.rotation = Quaternion.Euler(RotX, RotY, RotZ); // использую градусы
+        transform.rotation = Quaternion.LookRotation(point1, point2);
     }
 }
