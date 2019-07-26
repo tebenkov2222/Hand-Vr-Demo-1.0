@@ -515,9 +515,13 @@ MonoBehaviour:
   Empty2: {fileID: 1337168305}
   InstObject: {fileID: 1485218716806810, guid: 7ea1ab139e14ea24f8ce8866ec4e5624, type: 2}
   InstObjectPosition: {x: 0, y: 0, z: 0}
+  inst: {fileID: 0}
   Rotx: 0
   Roty: 0
   Rotz: 0
+  CosX: 0
+  CosY: 0
+  CosZ: 0
 --- !u!4 &1964076232
 Transform:
   m_ObjectHideFlags: 0
