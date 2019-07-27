@@ -201,7 +201,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617005925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1, y: 0, z: 0}
+  m_LocalPosition: {x: 6.82, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 634128664}
@@ -514,6 +514,8 @@ MonoBehaviour:
   Empty1: {fileID: 617005925}
   Empty2: {fileID: 1337168305}
   InstObject: {fileID: 1485218716806810, guid: 7ea1ab139e14ea24f8ce8866ec4e5624, type: 2}
+  Rectangle: {fileID: 1043990172305864, guid: a1569dc7743341e48994441cbc46d8d0, type: 2}
+  UVSphere: {fileID: 0}
   InstObjectPosition: {x: 0, y: 0, z: 0}
   inst: {fileID: 0}
   Rotx: 0

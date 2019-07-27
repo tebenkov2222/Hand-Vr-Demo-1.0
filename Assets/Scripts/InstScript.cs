@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class InstScript : MonoBehaviour
 {
-    public GameObject Empty1, Empty2, InstObject; // объекты: 1 и 2 точки и префаб кубика
+    public GameObject Empty1, Empty2, InstObject, Rectangle, UVSphere; // объекты: 1 и 2 точки и префаб кубика
     public Vector3 InstObjectPosition; // центральная точка, где должен быть кубик
     private float InstObjectScale, mousex, mousey, mousexnormal, mouseynormal; // скейл, мышьХ,мышьУ и начальные точки мыши(не актуально
     public GameObject inst; // сам кубик при инстанте сюда присваивается
@@ -27,7 +27,8 @@ public class InstScript : MonoBehaviour
     void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Space)) ExitFromInstantiate();
-        if (Input.GetKeyDown(KeyCode.E)) EnterFromInstantiate();
+        if (Input.GetKeyDown(KeyCode.E)) EnterFromInstantiateCube();
+        if (Input.GetKeyDown(KeyCode.R)) EnterFromInstantiateRectangle();
         ActiveInstantiate();
     }
     private void ActiveInstantiate()
@@ -37,8 +38,13 @@ public class InstScript : MonoBehaviour
             // енд старт код
             RotateVoid();
             inst.transform.position = InstObjectPosition; // присваиваем позицию
-            inst.transform.localScale = new Vector3(InstObjectScale, InstObjectScale, InstObjectScale); // присваиваем скейл
+            ScaleInst();
         }
+    }
+    private void ScaleInst()
+    {
+        if (inst.tag == "Rectangle") inst.transform.localScale = new Vector3(InstObjectScale, 0.2f, 0.2f);
+        else inst.transform.localScale = new Vector3(InstObjectScale, InstObjectScale, InstObjectScale); // присваиваем скейл
     }
     private void NormalPositionAndScale()
     {
@@ -61,7 +67,7 @@ public class InstScript : MonoBehaviour
         ActiveInstantiateBool = false;
         inst.GetComponent<Rigidbody>().useGravity = true;
     }
-    public void EnterFromInstantiate()
+    public void EnterFromInstantiateCube()
     {
         Debug.Log("Enter");
         ActiveInstantiateBool = true;
@@ -69,5 +75,13 @@ public class InstScript : MonoBehaviour
         inst = Instantiate(InstObject, InstObjectPosition, Quaternion.identity);
         inst.transform.localScale = new Vector3(InstObjectScale, InstObjectScale, InstObjectScale);
     }
-
+    public void EnterFromInstantiateRectangle()
+    {
+        Debug.Log("Enter");
+        ActiveInstantiateBool = true;
+        NormalPositionAndScale();
+        inst = Instantiate(Rectangle, InstObjectPosition, Quaternion.identity);
+        inst.transform.localScale = new Vector3(InstObjectScale, 0.2f, 0.2f);
+    }
 }
+
