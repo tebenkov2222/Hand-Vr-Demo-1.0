@@ -201,7 +201,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 617005925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.82, y: 0, z: 0}
+  m_LocalPosition: {x: 1.44, y: 0.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 634128664}
@@ -492,6 +492,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1964076232}
+  - component: {fileID: 1964076233}
   - component: {fileID: 1964076231}
   m_Layer: 0
   m_Name: Instantiate Script
@@ -506,7 +507,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1964076230}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 141c00fbb76cdf44fbb5417a92a1bea1, type: 3}
   m_Name: 
@@ -537,3 +538,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1964076233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1964076230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8646c000f335ede41940ffc01e237d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InstObject: {fileID: 0}
+  Cube: {fileID: 1485218716806810, guid: 7ea1ab139e14ea24f8ce8866ec4e5624, type: 2}
+  Rectangle: {fileID: 1043990172305864, guid: a1569dc7743341e48994441cbc46d8d0, type: 2}
+  UVSphere: {fileID: 0}
+  LeftSphere: {fileID: 617005925}
+  RightSphere: {fileID: 1337168305}
+  position: 1
+  scale: 1
+  rotation: 1
+  ActiveInstantiateBool: 0
