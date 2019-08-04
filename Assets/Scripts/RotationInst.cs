@@ -5,11 +5,15 @@ using UnityEngine;
 public class RotationInst : MonoBehaviour
 {
     Vector3 firstPoint, secondPoint, center, InstObjectScale;
-    public GameObject InstObject, Cube, Rectangle, UVSphere, LeftSphere, RightSphere;
+    public GameObject SelectObject, InstObject, Cube, Rectangle, IKSphere, LeftSphere, RightSphere;
     public bool position = true,
                 scale = true, 
                 rotation = true,
                 ActiveInstantiateBool = false;
+    private void Start()
+    {
+        SelectObject = Cube;
+    }
     private void FixedUpdate()
     {
         KeyboardScript();
@@ -17,8 +21,10 @@ public class RotationInst : MonoBehaviour
     private void KeyboardScript()
     {
         if (Input.GetKeyDown(KeyCode.Space)) ExitFromInstantiate();
-        if (Input.GetKeyDown(KeyCode.E)) EnterFromInstantiateCube();
+        if (Input.GetKeyDown(KeyCode.E) && !ActiveInstantiateBool) InstantiateSelectObject();
+        if (Input.GetKeyDown(KeyCode.C)) EnterFromInstantiateCube();
         if (Input.GetKeyDown(KeyCode.R)) EnterFromInstantiateRectangle();
+        if (Input.GetKeyDown(KeyCode.I)) EnterFromInstantiateIKSphere();
         ActiveInstantiate();
     }
     private void ActiveInstantiate()
@@ -67,20 +73,25 @@ public class RotationInst : MonoBehaviour
         Debug.Log("EXIT");
         ActiveInstantiateBool = false;
         InstObject.GetComponent<Rigidbody>().useGravity = true;
+        //if (InstObject.tag != "IK Sphere"); InstObject.GetComponent<BoxCollider>().isTrigger = false;
     }
     public void EnterFromInstantiateCube()
     {
-        Debug.Log("Enter");
-        ActiveInstantiateBool = true;
-        InstObject = Instantiate(Cube, center, Quaternion.identity);
-        ActiveInstantiate();
+        SelectObject = Cube;
 
     }
     public void EnterFromInstantiateRectangle()
     {
+        SelectObject = Rectangle;
+    }
+    public void EnterFromInstantiateIKSphere()
+    {
+        SelectObject = IKSphere;
+    }
+    public void InstantiateSelectObject()
+    {
         ActiveInstantiateBool = true;
-        Debug.Log("Enter");
-        InstObject = Instantiate(Rectangle, center, Quaternion.identity);
+        InstObject = Instantiate(SelectObject, center, Quaternion.identity);
         ActiveInstantiate();
     }
 }
