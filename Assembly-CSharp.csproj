@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ChangeColorGameObject.cs" />
     <Compile Include="Assets\Scripts\InstScript.cs" />
     <Compile Include="Assets\Scripts\RotationInst.cs" />
     <Compile Include="Assets\Scripts\RotationScriptInst.cs" />

@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 23219302473199560}
   - component: {fileID: 54530933481226824}
   - component: {fileID: 64658189904489866}
+  - component: {fileID: 114209543270674052}
   m_Layer: 0
   m_Name: IKSphere
   m_TagString: IK Sphere
@@ -187,3 +188,15 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: d682f3332ddb0e540b5dd6577b6f1925, type: 3}
+--- !u!114 &114209543270674052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1832028621693276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bf5a6e9ed47044381d0e72a7bc060c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FaceThis: {fileID: 1704490150265754}

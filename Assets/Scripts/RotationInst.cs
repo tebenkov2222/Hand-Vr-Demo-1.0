@@ -73,7 +73,10 @@ public class RotationInst : MonoBehaviour
         Debug.Log("EXIT");
         ActiveInstantiateBool = false;
         InstObject.GetComponent<Rigidbody>().useGravity = true;
+        InstObject.GetComponent<ChangeColorGameObject>().InstantiatedObject();
         //if (InstObject.tag != "IK Sphere"); InstObject.GetComponent<BoxCollider>().isTrigger = false;
+        //InstObject.GetComponentInChildren<MeshRenderer>().material.SetColor("_EmissionColor", new Color32(0, 25, 0, 255));
+        //InstObject.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", new Color32(0, 25, 0, 255));
     }
     public void EnterFromInstantiateCube()
     {
