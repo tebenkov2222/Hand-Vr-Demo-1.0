@@ -32,7 +32,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.1
+    value: 0.7
   threshold:
     overrideState: 1
     value: 1
@@ -53,13 +53,13 @@ MonoBehaviour:
     value: {r: 1, g: 1, b: 1, a: 1}
   fastMode:
     overrideState: 1
-    value: 0
+    value: 1
   dirtTexture:
-    overrideState: 1
+    overrideState: 0
     value: {fileID: 0}
     defaultState: 1
   dirtIntensity:
-    overrideState: 1
+    overrideState: 0
     value: 0
 --- !u!114 &114775547626989704
 MonoBehaviour:
@@ -115,7 +115,7 @@ MonoBehaviour:
     overrideState: 1
     value: -1
   tint:
-    overrideState: 1
+    overrideState: 0
     value: 0
   colorFilter:
     overrideState: 1
@@ -1388,22 +1388,22 @@ MonoBehaviour:
     value: 1
   preset:
     overrideState: 1
-    value: 2
+    value: 6
   maximumIterationCount:
     overrideState: 1
     value: 16
   resolution:
-    overrideState: 1
-    value: 0
+    overrideState: 0
+    value: 1
   thickness:
-    overrideState: 1
+    overrideState: 0
     value: 8
   maximumMarchDistance:
     overrideState: 1
-    value: 1369.7
+    value: 171.46
   distanceFade:
     overrideState: 1
-    value: 0.429
+    value: 1
   vignette:
     overrideState: 1
     value: 1
