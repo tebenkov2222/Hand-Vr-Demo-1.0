@@ -13,6 +13,7 @@ public class ChangeColorGameObject : MonoBehaviour {
     public GameObject FaceThis;
     private bool Active = false;
     Vector3 PastPosition;
+    private byte alpha = 0;
 	// Use this for initialization
 	void Start () {
         PastPosition = transform.position;
@@ -34,6 +35,9 @@ public class ChangeColorGameObject : MonoBehaviour {
 
             Color finalColor = baseColor * intensity;
             FaceThis.GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", finalColor);
+            Color32 StColor = this.GetComponent<MeshRenderer>().material.color;
+            this.GetComponent<MeshRenderer>().material.color = new Color32(StColor.r, StColor.g, StColor.b, alpha);
+             if (alpha <255) alpha += 15;
             if (intensity > 400) intensity = intensity - 300;
             else
             {
