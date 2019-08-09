@@ -33,7 +33,8 @@ public class InstScript : MonoBehaviour
     }
     private void ActiveInstantiate()
     {
-        if (ActiveInstantiateBool == true) {
+        if (ActiveInstantiateBool == true)
+        {
             NormalPositionAndScale();
             // енд старт код
             RotateVoid();

@@ -32,7 +32,7 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 0.7
+    value: 6.17
   threshold:
     overrideState: 1
     value: 1
@@ -85,25 +85,25 @@ MonoBehaviour:
     defaultState: 1
   tonemapper:
     overrideState: 1
-    value: 2
+    value: 3
   toneCurveToeStrength:
     overrideState: 1
     value: 0
   toneCurveToeLength:
     overrideState: 1
-    value: 0.5
+    value: 0
   toneCurveShoulderStrength:
     overrideState: 1
     value: 0
   toneCurveShoulderLength:
     overrideState: 1
-    value: 0.5
+    value: 0.87
   toneCurveShoulderAngle:
     overrideState: 1
-    value: 0
+    value: 1
   toneCurveGamma:
     overrideState: 1
-    value: 1
+    value: 1.77
   ldrLut:
     overrideState: 1
     value: {fileID: 0}
@@ -118,31 +118,31 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   colorFilter:
-    overrideState: 1
+    overrideState: 0
     value: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
   hueShift:
-    overrideState: 1
+    overrideState: 0
     value: 0
   saturation:
-    overrideState: 1
+    overrideState: 0
     value: 0
   brightness:
     overrideState: 1
     value: 0
   postExposure:
-    overrideState: 1
+    overrideState: 0
     value: 0
   contrast:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerRedOutRedIn:
-    overrideState: 1
+    overrideState: 0
     value: 100
   mixerRedOutGreenIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerRedOutBlueIn:
-    overrideState: 1
+    overrideState: 0
     value: 0
   mixerGreenOutRedIn:
     overrideState: 1
@@ -163,14 +163,14 @@ MonoBehaviour:
     overrideState: 1
     value: 100
   lift:
-    overrideState: 1
+    overrideState: 0
     value: {x: 1, y: 1, z: 1, w: -0.015847985}
   gamma:
-    overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: 0}
+    overrideState: 0
+    value: {x: 1, y: 1, z: 1, w: -0.03169572}
   gain:
-    overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: 0}
+    overrideState: 0
+    value: {x: 1, y: 1, z: 1, w: 0.047543578}
   masterCurve:
     overrideState: 1
     value:
